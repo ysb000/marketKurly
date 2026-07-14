@@ -8,7 +8,6 @@
 #wrap header .top_bnr_bg .top_bnr {
     text-align:center;
     width:1050px; margin:0 auto;
-    border:1px solid yellow;
     position:relative;
 }
 #wrap header .top_bnr_bg .top_bnr .ad_text {color:#fff;}
@@ -21,7 +20,7 @@
 #wrap header .top_bnr_bg .top_bnr #ad_close_btn img {width:100%}
 /* ---------------------------header 2행 로고~메뉴 */
 #wrap header .logo_user_menu {
-    background-color: aqua;
+
     width:1050px; margin:0 auto;
     display:flex; flex-flow:row nowrap;
     justify-content:space-between;
@@ -31,7 +30,6 @@
 #wrap header .logo_user_menu h1 a {}
 #wrap header .logo_user_menu h1 a img {}
 #wrap header .logo_user_menu .snb {
-    background-color: lime;
     display:flex; gap:16px;
 }
 #wrap header .logo_user_menu .snb > li {position:relative;}
@@ -43,7 +41,6 @@
 #wrap header .logo_user_menu .snb > li:nth-child(3)::after {display:none;}
 #wrap header .logo_user_menu .snb > li > a {}
 #wrap header .logo_user_menu .snb li .lnb {
-    background-color: pink;
     position:absolute; left:0;
     width:max-content;
 }

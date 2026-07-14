@@ -1,0 +1,176 @@
+/* join.css */
+#wrap {}
+#wrap main {
+    width:var(--width-container-sm);
+    margin:0 auto;
+}
+#wrap main h1 {
+    text-align: center; 
+    font-weight:var(--font-weight-semibold);
+}
+#wrap main #join_frm {margin:var(--spacing-lg) 0;}
+/* ----------------------회원가입약관 */
+#wrap main #join_frm .law {
+    background-color:var(--bg-disable);
+    padding:var(--spacing-md);
+    height:159px; overflow:auto;
+}
+#wrap main #join_frm .law * {
+    line-height:var(--line-height-md);
+    font-size:var(--font-size-xs);
+}
+#wrap main #join_frm .law h2 {}
+#wrap main #join_frm .law dl {}
+#wrap main #join_frm .law dl dt {}
+#wrap main #join_frm .law dl dd {}
+/* ------------------------------회원가입정보 */
+#wrap main #join_frm .join_list {
+    display:flex;
+    flex-flow:row wrap;
+    margin:var(--spacing-lg) 0;
+}
+#wrap main #join_frm .join_list dt {
+    width:var(--width-title);
+    font-size:var(--font-size-sm);
+    line-height:var(--height-button) ;    
+}
+#wrap main #join_frm .join_list dt .important{
+    color:var(--color-warning);
+    font-size:var(--font-size-xs);
+} /* 필수표시 */
+#wrap main #join_frm .join_list dd {
+    /* width:490px; */
+    /* 계산기 함수: css 값 계산시 calc() 함수를 활용해서 계산가능 */
+    /* calc() 함수 작성 시 주의할 점: 산술연산자 좌/우 한칸 공백 필요 */
+    /* 부모(100%) 너비에서 형제 150px을 뺀 나머지 값을 dd에 적용 */
+    width:calc(100% - 150px); 
+    margin-bottom:var(--spacing-xs);
+    position:relative;
+}
+/*-----------------------------버튼 공통 디자인 */
+#wrap main #join_frm .join_list dd button {
+    position:absolute; right:0; top:0;
+}
+/* -----------------------------아이디~비밀번호 확인 공통 디자인*/
+#wrap main #join_frm .join_list dd > input[placeholder] {
+    background-color:var(--bg-basic);
+    width:var(--width-input);
+    height:var(--height-button);
+    border-radius:var(--radius-xs);
+    border:1px solid var(--border-color);
+    font-size:var(--font-size-xs);
+    padding:0 var(--spacing-m);
+}
+#wrap main #join_frm .join_list dd > input[placeholder]::placeholder {
+    color:var(--color-placeholder);}
+/* -----------------------------아이디~비밀번호 확인 */
+#wrap main #join_frm .join_list dd #user_id{}
+#wrap main #join_frm .join_list dd #user_id_chk_btn{
+    background-color: var(--color-primary);
+    width:var(--width-button);
+    height:var(--height-button);
+    color:var(--bg-basic);
+    border-radius:var(--radius-xs);
+    font-size:var(--font-size-xs);
+    font-weight:var(--font-weight-semibold);
+    
+}
+#wrap main #join_frm .join_list dd #user_pw{}
+/* -----------------------------이름~이메일 */
+#wrap main #join_frm .join_list dd #user_name{}
+#wrap main #join_frm .join_list dd #user_email{}
+/* -----------------------------휴대폰 */
+#wrap main #join_frm .join_list dd #agency {
+    width:var(--width-button-s); height:var(--height-button);
+    border:1px solid var(--border-color);
+    border-radius:var(--radius-xs);
+    background-image:url(../images/arrow.svg);
+    background-repeat: no-repeat;
+    background-position:100% 60%;
+    padding-left:var(--spacing-xs);
+    font-size:var(--font-size-xs);
+   /*  margin-right:var(--spacing-sm); */
+}
+#wrap main #join_frm .join_list dd #agency option {}
+#wrap main #join_frm .join_list dd #user_num {
+    width:236px
+}
+#wrap main #join_frm .join_list dd #authentication_chk_btn  {
+    background-color:var(--border-color);
+    width:var(--width-button);
+    height:var(--height-button);
+    border-radius:var(--radius-xs);
+    color:var(--bg-basic);
+    font-size: var(--font-size-xs);
+    font-weight:var(--font-weight-semibold);
+}
+/* -----------------------------주소 */
+#wrap main #join_frm .join_list dd .address_search {
+    background-color:var(--bg-basic);
+    display:block;
+    width:var(--width-input);
+    line-height:var(--height-button);
+    text-align: center;
+    border-radius:var(--radius-xs);
+    border: 1px solid var(--color-primary);
+    font-size:var(--font-size-xs);
+    font-weight:var(--font-weight-semibold);
+    margin-bottom:var(--spacing-xs);
+}
+#wrap main #join_frm .join_list dd .address_search + p {
+    font-size:var(--font-size-xs);
+}
+/* -----------------------------성별 */
+#wrap main #join_frm .join_list dd input[name=gender] {display:none;}
+/* 선택된 상태 */
+#wrap main #join_frm .join_list dd input[name=gender]:checked+label {
+    background-image:url(../images/on.svg)
+}
+/* 선택되지 않은 상태 */
+#wrap main #join_frm .join_list dd input[name=gender]+label {
+    background-image: url(../images/off.svg);
+    background-repeat:no-repeat;
+    padding-left:var(--spacing-md);
+    font-size:var(--font-size-xs);
+}
+#wrap main #join_frm .join_list dd input[name=gender]+label:nth-child(2) {
+    margin-left:65px; line-height:var(--line-height-md);
+}
+/* -----------------------------생년월일 */
+#wrap main #join_frm .join_list dd .ymd {
+    border:1px solid var(--color-primary);
+    border-radius:var(--radius-xs);
+    width:var(--width-input);
+    height:var(--height-button);
+    align-items:center; justify-content: center;
+    display:flex; /* 자식 li*3 옆으로 정렬하기 위한 flex */
+}
+#wrap main #join_frm .join_list dd .ymd li {
+    display:flex;/* 자식 input+after 옆으로 정렬하기 위한 flex */
+    align-items:center;
+}
+#wrap main #join_frm .join_list dd .ymd li::after {
+    content:'/';
+    color:var(--color-placeholder);
+    font-size:(--font-size-xs);
+    margin:0 var(--spacing-m);
+}
+#wrap main #join_frm .join_list dd .ymd li:nth-child(3)::after {display:none;}
+#wrap main #join_frm .join_list dd .ymd li input[name*=user] {font-size:var(--font-size-xs);}
+#wrap main #join_frm .join_list dd .ymd li input[name*=y] {width:31px;}
+#wrap main #join_frm .join_list dd .ymd li input[name*=m] {width:21px;}
+#wrap main #join_frm .join_list dd .ymd li input[name*=d] {width:17px;}
+/* -------------------------------가입버튼 */
+#wrap main #join_frm .join_list + p {
+    text-align:center;
+}
+#wrap main #join_frm .join_list + p #join_btn {
+    background-color:var(--color-primary);
+    width:var(--width-button-lg);
+    height:var(--height-button);
+    border-radius:var(--radius-xs);
+    color:var(--bg-basic);
+    font-size:var(--font-size-xs);
+    font-weight:var(--font-weight-semibold);
+
+}

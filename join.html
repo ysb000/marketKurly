@@ -7,9 +7,10 @@
     <meta name="keywords" content="마켓컬리, 회원가입">
     <title>회원가입 | 마켓컬리</title>
     <link rel="shortcut icon" href="" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/join.css">
+    <link rel="stylesheet" href="./styles/reset.css"><!-- 초기화 -->
+    <link rel="stylesheet" href="./styles/var.css"><!-- 변수 -->
+    <link rel="stylesheet" href="./styles/index.css"><!-- 헤더의 디자인 -->
+    <link rel="stylesheet" href="./styles/join.css"><!-- 디자인2 -->
     <script src="./sripts/join.js" defer></script>
 </head>
 <body>
@@ -58,7 +59,7 @@
                     <dt>아이디<span class="important">*</span></dt>
                     <dd>
                         <input type="text" autofocus required placeholder="아이디를 입력해주세요." name="user_id" id="user_id">
-                        <button type="button" id="user_id_check_btn">중복확인</button>
+                        <button type="button" id="user_id_chk_btn">중복확인</button>
                     </dd>
                     <dt>비밀번호<span class="important">*</span></dt>
                     <dd>
@@ -66,7 +67,7 @@
                     </dd>
                     <dt>비밀번호 확인<span class="important">*</span></dt>
                     <dd>
-                        <input type="password" required placeholder="비밀번호를 한번 더 입력해주세요." name="user_pw_check" id="user_pw_check">
+                        <input type="password" required placeholder="비밀번호를 한번 더 입력해주세요." name="user_pw_chk" id="user_pw_chk">
                     </dd>
                     <dt>이름<span class="important">*</span></dt>
                     <dd>
@@ -75,18 +76,17 @@
                     <dt>이메일<span class="important">*</span></dt>
                     <dd>
                         <input type="email" required placeholder="예) abc@web.com" name="user_email" id="user_email">
-                        <button type="button" id="user_email_check_btn">중복확인</button>
                     </dd>
                     <!-- -------------------------- 휴대폰 -->
                     <dt>휴대폰<span class="important">*</span></dt>
                     <dd>
-                        <select name="news_agency" id="news_agency">
+                        <select name="agency" id="agency">
                             <option value="kt">KT</option>
                             <option value="skt">SKT</option>
                             <option value="lgu">LG U+</option>
                         </select>
-                        <input type="number" placeholder="숫자만 입력해주세요. 예) 01012345678" required maxlength="11" name="user_tel" id="user_tel">
-                        <button type="button" id="certification_num_btn">인증번호 받기</button>
+                        <input type="number" placeholder="숫자만 입력해주세요. 예) 01012345678" required maxlength="11" name="user_num" id="user_num">
+                        <button type="button" id="authentication_chk_btn">인증번호 받기</button>
                     </dd>
                     <!-- -------------------------- 주소 -->
                     <dt>주소<span class="important">*</span></dt>
@@ -99,13 +99,21 @@
                     <dd>
                         <input type="radio" name="gender" value="male" id="male">
                         <label for="male">남자</label>
-                        <input type="radio" name="gender" value="female" id="female">
+                        <input type="radio" checked name="gender" value="female" id="female">
                         <label for="female">여자</label>
                         <input type="radio" name="gender" value="gender_none" id="gender_none">
                         <label for="gender_none">선택안함</label>
                     </dd>
                     <!-- -------------------------- 생년월일 -->
                     <dt>생년월일</dt>
+                    <dd>
+                        <ul class="ymd">
+                            <!-- 같은 그룹(선택 양식의 name) 기준으로 checked는 주 고객(페르소나)에 맞춰서 기본선택상태 권장 -->
+                            <li><input type="text" name="user_year" id="user_year" placeholder="YYYY"></li>
+                            <li><input type="text" name="user_month" id="user_month" placeholder="MM"></li>
+                            <li><input type="text" name="user_day" id="user_day" placeholder="DD"></li>
+                        </ul>
+                    </dd>
                 </dl>
                 <p><button type="button" id="join_btn">가입하기</button></p>
             </form>
